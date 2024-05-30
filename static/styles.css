@@ -1,0 +1,64 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Using Roboto font as the primary font */
+  background-color: #ff7f50; /* Coral background color */
+  color: #333; /* Dark gray text color */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* White background for content */
+  border-radius: 10px; /* Rounded corners for content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+}
+
+/* Styling the header */
+header h1 {
+    font-family: 'Wide Latin', cursive; /* Wide Latin font */
+    margin: 0;
+    color: #555; /* Darker gray color for the header text */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff7f50 /*#ffdab9; /* Coral header background */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Add some padding */
+  border-radius: 10px; /* Rounded corners for header */
+}
+
+nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #fff; /* White text color for links */
+}
+
+main {
+  background-color: white; /* White background for main content */
+  padding: 20px; /* Add padding to main content */
+  border-radius: 10px; /* Rounded corners for main content */
+}
+
+.flashes {
+  list-style: none;
+  padding: 0;
+}
+
+.flashes li {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.flashes .message {
+  background-color: #dff0d8;
+  color: #155724; /* Dark green text color */
+}
+
+.flashes .error {
+  background-color: #f2dede;
+  color: #721c24; /* Dark red text color */
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Create Task</h2>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <div>
+      {{ form.title.label }}<br>
+      {{ form.title(size=32) }}
+    </div>
+    <div>
+      {{ form.description.label }}<br>
+      {{ form.description(cols=32, rows=4) }}
+    </div>
+    <div>
+      {{ form.due_date.label }}<br>
+      {{ form.due_date(size=32) }}
+    </div>
+    <div>
+      {{ form.priority.label }}<br>
+      {{ form.priority(size=32) }}
+    </div>
+    <div>
+      {{ form.status.label }}<br>
+      {{ form.status(size=32) }}
+    </div>
+    <div>
+      {{ form.submit() }}
+    </div>
+  </form>
+{% endblock %}
