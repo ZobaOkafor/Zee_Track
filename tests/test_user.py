@@ -37,7 +37,7 @@ class UserModelCase(unittest.TestCase):
 		# Debugging output
 		if response.status_code != 302:
             print("Register form errors:", response.data.decode())
-		 # Expect redirect after successful registration
+		# Expect redirect after successful registration
         self.assertEqual(response.status_code, 302)
 
     def test_login_user(self):
