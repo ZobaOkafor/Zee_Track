@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h2>Projects</h2>
+<form method="post" action="{{ url_for('main.add_project') }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.project_name.label }}<br>
+        {{ form.project_name(size=32) }}<br>
+        {{ form.project_name.errors }}
+    </div>
+    <div>
+        {{ form.description.label }}<br>
+        {{ form.description(cols=32, rows=4) }}<br>
+        {{ form.description.errors }}
+    </div>
+    <div>
+        <input type="submit" value="Add Project">
+    </div>
+</form>
+<ul>
+    {% for project in projects %}
+        <li>{{ project.name }} - {{ project.description }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

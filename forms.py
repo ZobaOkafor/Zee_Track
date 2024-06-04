@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import (
-        StringField, PasswordField, SubmitField, BooleanField, TextAreaField)
+        StringField, PasswordField, SubmitField, BooleanField,
+        TextAreaField, DateField)
 from wtforms.validators import (
         DataRequired, Length, Email, EqualTo, ValidationError)
 from models.user import User
@@ -39,16 +40,23 @@ class LoginForm(FlaskForm):
 class TaskForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     description = TextAreaField('Description')
-    due_date = StringField('Due Date')
+    due_date = DateField('Due Date', format='%Y-%m-%d')
     priority = StringField('Priority')
     status = StringField('Status')
     submit = SubmitField('Create Task')
 
 
-class ProjectForm(FlaskForm):
-    title = StringField('Title', validators=[DataRequired()])
+class EditTaskForm(FlaskForm):
+    name = StringField('Task Name', validators=[DataRequired()])
     description = TextAreaField('Description')
-    start_date = StringField('Start Date')
-    end_date = StringField('End Date')
+    due_date = DateField('Due Date', format='%Y-%m-%d')
+    submit = SubmitField('Update Task')
+
+
+class ProjectForm(FlaskForm):
+    project_name = StringField('Title', validators=[DataRequired()])
+    description = TextAreaField('Description')
+    start_date = DateField('Start Date', format='%Y-%m-%d')
+    end_date = DateField('End Date', format='%Y-%m-%d')
     status = StringField('Status')
     submit = SubmitField('Create Project')

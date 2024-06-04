@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Calendar</h2>
+<table>
+    <tr>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+    </tr>
+    {% for week in calendar %}
+    <tr>
+        {% for day in week %}
+        <td>
+            {{ day.day }}
+            {% if day.events %}
+            <ul>
+                {% for event in day.events %}
+                <li class="event">{{ event }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

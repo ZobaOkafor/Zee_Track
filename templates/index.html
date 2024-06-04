@@ -1,34 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zee Track</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
-        body {
-            background-color: peachpuff; /* Set background color to peachpuff */
-            font-family: 'Roboto', sans-serif; /* Use Roboto font */
-        }
-        h1 {
-            font-family: 'Wide Latin', cursive; /* Use Wide Latin font for h1 */
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Zee Track</h1> <!-- App name in Wide Latin font -->
-            <nav>
-                <!-- Add navigation links here if needed -->
-            </nav>
-        </header>
-        <main>
-            <h2>Welcome to Zee Track</h2>
-            <p>Your task and project management tool.</p>
-            <!-- Additional content goes here -->
-        </main>
-    </div>
-</body>
-</html>
+{% extends "base.html" %}
+
+
+{% block content %}
+<h2>Welcome to Zee Track</h2>
+<p>Your task and project management tool.</p>
+{% endblock %}

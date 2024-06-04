@@ -1,0 +1,39 @@
+{%extends "base.html" %}
+
+
+{% block content %}
+<h2>Tasks</h2>
+<form method="post" action="{{ url_for('main.tasks') if not edit_task else url_for('main.edit_task', task_id=edit_task.id) }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.title.label }}<br>
+        {{ form.title(size=32) }}<br>
+	{{ form.title(value=edit_task.title if edit_task else '') }}
+        {{ form.title.errors }}
+    </div>
+    <div>
+        {{ form.description.label }}<br>
+        {{ form.description(cols=32, rows=4) }}<br>
+	{{ form.description(value=edit_task.description if edit_task else '') }}
+        {{ form.description.errors }}
+    </div>
+    <div>
+	{{ form.due_date.label }}<br>
+	{{ form.due_date(value=edit_task.due_date if edit_task else '') }}
+    </div>
+    <div>
+        <input type="submit" value="Add Task">
+    </div>
+</form>
+<ul>
+    {% for task in tasks %}
+	<li>
+            {{ task.name }}
+            <a href="{{ url_for('main.edit_task', id=task.id) }}">Edit</a>
+            <form action="{{ url_for('main.delete_task', id=task.id) }}" method="POST" style="display:inline;">
+                <input type="submit" value=Delete>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

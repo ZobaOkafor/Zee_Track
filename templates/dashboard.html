@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Dashboard</h2>
+
+<section id="tasks">
+    <h3>Tasks</h3>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task.name }} - {{ task.status }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section id="projects">
+    <h3>Projects</h3>
+    <ul>
+        {% for project in projects %}
+            <li>{{ project.name }} - {{ project.status }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<section id="notifications">
+    <h3>Notifications</h3>
+    <ul>
+        {% for notification in notifications %}
+            <li>{{ notification.message }}</li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

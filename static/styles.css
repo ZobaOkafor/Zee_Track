@@ -1,31 +1,35 @@
+/* General body styles */
 body {
   font-family: 'Roboto', sans-serif; /* Using Roboto font as the primary font */
-  background-color: #ff7f50; /* Coral background color */
-  color: #333; /* Dark gray text color */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark gradient background */
+  color: #d1d1d1; /* Light gray text color */
+  margin: 0;
+  padding: 0;
 }
 
+/* Container for main content */
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
-  background-color: #fff; /* White background for content */
+  background-color: #2a2a2a; /* Dark gray background for content */
   border-radius: 10px; /* Rounded corners for content */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Drop shadow effect */
 }
 
 /* Styling the header */
 header h1 {
-    font-family: 'Wide Latin', cursive; /* Wide Latin font */
-    margin: 0;
-    color: #555; /* Darker gray color for the header text */
+  font-family: 'Wide Latin', cursive; /* Wide Latin font */
+  margin: 0;
+  color: #ffb3b3; /* Light coral color for the header text */
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ff7f50 /*#ffdab9; /* Coral header background */
-  color: #fff; /* White text color */
+  background-color: #1f1f1f; /* Very dark gray header background */
+  color: #ffb3b3; /* Light coral text color */
   padding: 10px 20px; /* Add some padding */
   border-radius: 10px; /* Rounded corners for header */
 }
@@ -33,15 +37,16 @@ header {
 nav a {
   margin-left: 10px;
   text-decoration: none;
-  color: #fff; /* White text color for links */
+  color: #ffb3b3; /* Light coral text color for links */
 }
 
 main {
-  background-color: white; /* White background for main content */
+  background-color: #2a2a2a; /* Dark gray background for main content */
   padding: 20px; /* Add padding to main content */
   border-radius: 10px; /* Rounded corners for main content */
 }
 
+/* Flash message styles */
 .flashes {
   list-style: none;
   padding: 0;
@@ -54,11 +59,94 @@ main {
 }
 
 .flashes .message {
-  background-color: #dff0d8;
-  color: #155724; /* Dark green text color */
+  background-color: #4caf50; /* Green background for success messages */
+  color: #fff; /* White text color */
 }
 
 .flashes .error {
-  background-color: #f2dede;
-  color: #721c24; /* Dark red text color */
+  background-color: #f44336; /* Red background for error messages */
+  color: #fff; /* White text color */
+}
+
+/* Form and input styles */
+form {
+  margin: 20px 0;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  color: #d1d1d1; /* Light gray color for labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #3a3a3a; /* Darker gray for input fields */
+  border: 1px solid #555; /* Border for input fields */
+  color: #d1d1d1; /* Light gray text color */
+}
+
+form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007BFF; /* Blue button background */
+  border: none;
+  color: white; /* White text color */
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* List styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+a {
+  color: #007BFF; /* Blue link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #555; /* Dark border for table cells */
+  padding: 8px;
+  text-align: center;
+  color: #d1d1d1; /* Light gray text color */
+}
+
+th {
+  background-color: #444; /* Dark background for table headers */
+}
+
+.event {
+  background-color: #007BFF; /* Blue background for events */
+  color: white; /* White text color */
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 3px;
 }

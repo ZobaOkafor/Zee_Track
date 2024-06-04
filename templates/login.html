@@ -1,22 +1,26 @@
 {% extends "base.html" %}
 
+
 {% block content %}
-  <h2>Login</h2>
-  <form method="post" actio="{{ url_for('main.login') }}">
+<h2>Login</h2>
+<form method="post">
     {{ form.hidden_tag() }}
     <div>
-      {{ form.email.label }}<br>
-      {{ form.email(size=32) }}
+        {{ form.email.label }}<br>
+        {{ form.email(size=32) }}<br>
+        {{ form.email.errors }}
     </div>
     <div>
-      {{ form.password.label }}<br>
-      {{ form.password(size=32) }}
+        {{ form.password.label }}<br>
+        {{ form.password(size=32) }}<br>
+        {{ form.password.errors }}
     </div>
     <div>
-      {{ form.remember }} {{ form.remember.label }}
+        {{ form.remember.label }}<br>
+        {{ form.remember() }}
     </div>
     <div>
-      {{ form.submit() }}
+        <input type="submit" value="Login">
     </div>
-  </form>
+</form>
 {% endblock %}
