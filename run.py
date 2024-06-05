@@ -6,6 +6,7 @@ from routes import main as main_blueprint
 from extensions import db, migrate, login, bcrypt, csrf, socketio
 from config import Config
 
+
 def create_app():
     app = Flask(__name__, static_folder='static')
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'

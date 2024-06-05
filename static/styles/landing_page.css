@@ -2,7 +2,7 @@
 
 /* General styles for body */
 body {
-    font-family: Arial, sans-serif; /* Font family for the entire page */
+    font-family: Roboto, sans-serif; /* Font family for the entire page */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4; /* Light grey background color for the page */
@@ -40,7 +40,7 @@ header nav ul li a {
 }
 
 #cover img {
-    width: 100%; /* Full width for cover image */
+    width: 50%; /* Full width for cover image */
     height: auto; /* Maintain aspect ratio */
 }
 

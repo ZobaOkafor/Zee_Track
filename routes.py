@@ -11,6 +11,16 @@ main = Blueprint('main', __name__)
 
 
 @main.route('/')
+def landing_page():
+    return render_template('landing_page.html')
+
+
+@main.route('/app')
+@login_required
+def app_main():
+    return render_template('main_app.html')
+
+
 @main.route('/index')
 @login_required
 def index():
@@ -244,10 +254,5 @@ def calendar():
         })
 
     return render_template('calendar.html', events=events, title='Calendar')
-
-
-@main.route('/')
-def landing_page():
-    return render_template('landing_page.html')
 
 # Other routes for tasks and projects will follow the same structure

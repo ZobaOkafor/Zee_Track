@@ -1,69 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zee Track - Welcome</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='landing_page.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="{{ url_for('main.login') }}">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="cover">
-            <img src="{{ url_for('static', filename='cover.jpg') }}" alt="Cover Image">
-            <div class="intro-text">
-                <h1>Zee Track</h1>
-                <p>Track Your Tasks Efficiently</p>
-                <a href="/app" class="cta-button">Go to App</a>
-            </div>
-        </section>
-        <section id="features">
-            <h2>Features</h2>
-            <div class="feature">
-                <img src="{{ url_for('static', filename='task_feature.jpg') }}" alt="Feature 1 Image">
-                <h3>Easy Task Management</h3>
-                <p>Organize and manage your tasks with ease, using our intuitive interface and powerful features.</p>
-            </div>
-            <div class="feature">
-                <img src="{{ url_for('static', filename='notification_feature.jpg') }}" alt="Feature 2 Image">
-                <h3>Real-Time Updates</h3>
-                <p>Stay updated with real-time notifications and updates, ensuring you never miss a deadline.</p>
-            </div>
-            <div class="feature">
-                <img src="{{ url_for('static', filename='project_feature.jpg') }}" alt="Feature 3 Image">
-                <h3>Collaborate with Team</h3>
-                <p>Work together with your team seamlessly, sharing tasks and tracking progress collaboratively.</p>
-            </div>
-        </section>
-        <section id="about">
-            <h2>About Zee Track</h2>
-            <p>
-                The inspiration for Zee Track came from my personal struggle with staying organized. As someone who juggles multiple projects, I needed a tool that could help me keep track of my tasks efficiently. This project began as a simple idea and evolved over time, culminating in what you see today. 
-                It is also a Portfolio Project for my ALX-SE Programme, where I have been honing my skills as a developer. You can learn more about ALX <a href="https://www.alxafrica.com">here</a>.
-            </p>
-            <div class="team-member">
-                <h3>Team</h3>
-                <a href="https://www.linkedin.com/in/chizoba-judith-okafor-76575bb7">LinkedIn</a> |
-                <a href="https://github.com/ZobaOkafor">GitHub</a> |
-                <a href="https://twitter.com/Zoba_Okafor">Twitter</a>
-            </div>
-            <div class="project-link">
-                <h3>Project Repository</h3>
-                <a href="https://github.com/ZobaOkafor/Zee_Track">GitHub Repository</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Zee Track. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Zee Track - Landing Page{% endblock %}
+
+{% block content %}
+<div id="cover">
+    <img src="{{ url_for('static', filename='images/cover.jpg') }}" alt="Cover Image">
+    <div class="intro-text">
+        <h1>Zee Track</h1>
+        <p>Track Your Tasks Efficiently</p>
+        <a href="{{ url_for('main.app_main') }}" class="cta-button">Go to App</a>
+    </div>
+</div>
+<main>
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/task_feature.jpg') }}" alt="Task_feature Image">
+            <h3>Easy Task Management</h3>
+            <p>Organize and manage your tasks with ease, using our intuitive interface and powerful features.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/notification_feature.jpg') }}" alt="Notification_feature 2 Image">
+            <h3>Real-Time Updates</h3>
+            <p>Stay updated with real-time notifications and updates, ensuring you never miss a deadline.</p>
+        </div>
+        <div class="feature">
+            <img src="{{ url_for('static', filename='images/project_feature.jpg') }}" alt="Project_feature Image">
+            <h3>Collaborate with Team</h3>
+            <p>Work together with your team seamlessly, sharing tasks and tracking progress collaboratively.</p>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Zee Track</h2>
+        <p>
+            The inspiration for Zee Track came from my personal struggle with staying organized. As someone who juggles multiple projects, I needed a tool that could help me keep track of my tasks efficiently. This project began as a simple idea and evolved over time, culminating in what you see today.
+            It is also a Portfolio Project for my ALX-SE Programme, where I have been honing my skills as a developer. You can learn more about ALX <a href="https://www.alxafrica.com">here</a>.
+        </p>
+        <div class="team-member">
+            <h3>Team</h3>
+            <a href="https://www.linkedin.com/in/chizoba-judith-okafor-76575bb7">LinkedIn</a> |
+            <a href="https://github.com/ZobaOkafor">GitHub</a> |
+            <a href="https://twitter.com/Zoba_Okafor">Twitter</a>
+        </div>
+        <div class="project-link">
+            <h3>Project Repository</h3>
+            <a href="https://github.com/ZobaOkafor/Zee_Track">GitHub Repository</a>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Zee Track. All rights reserved.</p>
+</footer>
+{% endblock %}
