@@ -1,0 +1,127 @@
+/* styling for landing page */
+
+/* General styles for body */
+body {
+    font-family: Arial, sans-serif; /* Font family for the entire page */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background color for the page */
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark grey background color for the header */
+    color: #fff; /* White text color for the header */
+    padding: 10px 0; /* Vertical padding for the header */
+    text-align: center; /* Center-aligned text for the header */
+}
+
+/* Navigation styles */
+header nav ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+header nav ul li {
+    display: inline; /* Display list items in a horizontal line */
+    margin: 0 10px; /* Horizontal margin between navigation items */
+}
+
+header nav ul li a {
+    color: #fff; /* White text color for navigation links */
+    text-decoration: none; /* Remove underline from navigation links */
+}
+
+/* Cover section styles */
+#cover {
+    position: relative; /* Relative positioning for positioning child elements */
+    text-align: center; /* Center-aligned text */
+    color: white; /* White text color for the cover section */
+}
+
+#cover img {
+    width: 100%; /* Full width for cover image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Intro text styles */
+.intro-text {
+    position: absolute; /* Absolute positioning within the cover section */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by 50% to center perfectly */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px; /* Padding for the intro text */
+    border-radius: 10px; /* Rounded corners for the intro text background */
+}
+
+/* Call-to-action button styles */
+.cta-button {
+    display: inline-block; /* Inline block for proper padding */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007bff; /* Blue background color for the button */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    margin-top: 20px; /* Margin above the button */
+}
+
+/* Main content styles */
+main {
+    padding: 20px; /* Padding for the main content area */
+    text-align: center; /* Center-aligned text for the main content */
+}
+
+/* Section styles for about and features */
+#about, #features {
+    margin: 20px 0; /* Vertical margin for about and features sections */
+}
+
+/* Feature box styles */
+.feature {
+    display: inline-block; /* Display features side by side */
+    width: 30%; /* Width of each feature box */
+    margin: 1.5%; /* Margin around each feature box */
+    vertical-align: top; /* Align features to the top */
+    text-align: left; /* Left-aligned text for feature boxes */
+    background-color: #fff; /* White background color for feature boxes */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 10px; /* Rounded corners for feature boxes */
+    padding: 20px; /* Padding inside each feature box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for feature boxes */
+}
+
+/* Feature image styles */
+.feature img {
+    max-width: 100%; /* Max width of 100% for feature images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for feature images */
+}
+
+/* Team member styles */
+.team-member {
+    margin: 20px 0; /* Vertical margin for team member section */
+}
+
+/* Team member link styles */
+.team-member a {
+    text-decoration: none; /* Remove underline from team member links */
+    color: #007bff; /* Blue text color for links */
+    margin: 0 5px; /* Horizontal margin between links */
+}
+
+/* Project link styles */
+.project-link {
+    margin: 20px 0; /* Vertical margin for project link */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333; /* Dark grey background color for the footer */
+    color: #fff; /* White text color for the footer */
+    text-align: center; /* Center-aligned text for the footer */
+    padding: 10px 0; /* Vertical padding for the footer */
+    position: relative; /* Relative positioning for footer */
+    bottom: 0; /* Stick footer to the bottom */
+    width: 100%; /* Full width for the footer */
+}

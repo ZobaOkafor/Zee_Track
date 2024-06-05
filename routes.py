@@ -159,7 +159,7 @@ def add_project():
             end_date=form.end_date.data,
             status=form.status.data,
             user_id=current_user.id
-        ) 
+        )
         db.session.add(project)
         db.session.commit()
         flash('Project created successfully!', 'success')
@@ -231,7 +231,8 @@ def calendar():
         events.append({
             'title': task.title,
             'start': task.due_date.strftime("%Y-%m-%d"),
-            'color': 'red' if task.priority == 'High' else 'orange' if task.priority == 'Medium' else 'green'
+            'color': 'red' if task.priority == 'High' else 'orange'
+                     if task.priority == 'Medium' else 'green'
         })
 
     for project in projects:
@@ -243,5 +244,10 @@ def calendar():
         })
 
     return render_template('calendar.html', events=events, title='Calendar')
+
+
+@main.route('/')
+def landing_page():
+    return render_template('landing_page.html')
 
 # Other routes for tasks and projects will follow the same structure
